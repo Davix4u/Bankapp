@@ -1,0 +1,46 @@
+# Green Deployment (New Version - Deployed by CI/CD)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bankapp-green
+  labels:
+    app: bankapp
+    version: green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bankapp
+      version: green
+  template:
+    metadata:
+      labels:
+        app: bankapp
+        version: green
+    spec:
+      containers:
+      - name: bankapp
+        image: davixs4u/bankapp:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:mysql://mysql-service:3306/bankappdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+        - name: SPRING_DATASOURCE_USERNAME
+          value: root
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: Test@123
+        - name: VERSION
+          value: "green-v2.0"
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 5
