@@ -99,7 +99,11 @@ terraform apply
 
  ![Alt text]<img width="836" height="421" alt="image" src="https://github.com/user-attachments/assets/f9e397c8-2fd4-4937-8124-b48dedb6832b" />
 
-  ![Alt text] <img width="955" height="485" alt="Screenshot 2025-12-06 005441" src="https://github.com/user-attachments/assets/e65e9402-c4a3-46b3-a50f-600edef1eb2f" />
+  ![Alt text]<img width="955" height="485" alt="Screenshot 2025-12-06 005441" src="https://github.com/user-attachments/assets/e65e9402-c4a3-46b3-a50f-600edef1eb2f" />
+
+
+   ![Alt text]<img width="1919" height="839" alt="Screenshot 2025-12-06 081245" src="https://github.com/user-attachments/assets/1e5c987a-3a6e-48c9-ac1e-a1f5d0b97531" />
+
 
 
  
